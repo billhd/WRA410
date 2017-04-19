@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<script LANGUAGE="JavaScript">
+<!--Hide JavaScript from Browsers that don't support it
+function test_it(entry) {
+if (entry.value!=null && entry.value.length!=0) {
+entry.value=""+ eval(entry.value);
+}
+computeForm(entry.form);
+}
+function computeForm(form) {
+var total=0
+
+for (var count=0; count<5; count++)
+{
+if (form.a[count].checked){
+var total=total+parseInt(form.a[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.b[count].checked){
+var total=total+parseInt(form.b[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.c[count].checked){
+var total=total+parseInt(form.c[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.d[count].checked){
+var total=total+parseInt(form.d[count].value);
+}
+}
+
+for (var count=0; count<5; count++)
+{
+if (form.e[count].checked){
+var total=total+parseInt(form.e[count].value);
+}
+}
+
+if (total==0){window.open("answer1.html","nihilist","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else if (total<5){ window.open("incompleteanswer.html","tryagain","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else if (total<7){ window.open("answer2.html","gorgias","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else if (total<14){ window.open("answer3.html","star","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else if (total<18){ window.open("answer4.html","berliner","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else if (total<22){ window.open("answer5.html","platonic","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+else { window.open("answer6.html","logos","height=300,width=300,toolbar=0,menubar=0,status=0,resizable=0") }
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<strong>How Digitally Rhetorical Are You?</strong><br><br>
+<form METHOD="POST">
+<strong>Invention</strong><br>
+You tell students "to begin your next paper, start with one of your classmates previous papers. 
+Pick one that you know was successful or highly graded if you can. Copy and paste all of the 
+text into a new file and begin systematically editing the file at the word and sentence level 
+to allow it to suit your current topic and context more readily."<br>
+<input TYPE="radio" NAME="a" VALUE="1">Been there, done that.<br>
+<input TYPE="radio" NAME="a" VALUE="2">I might give this a shot as an in-class exercise.<br>
+<input TYPE="radio" NAME="a" VALUE="3">Um, I don't know about that.<br>
+<input TYPE="radio" NAME="a" VALUE="4">That's cheating! (but do you have an old committee report I could look at, I have one due next week...)<br>
+<input TYPE="radio" NAME="a" VALUE="5">That's it! I am not reading any further!.<br><br>
+
+<strong>Arrangement</strong></br>
+You say "I don't want you to think of 'paragraphs' as the important chunks in this writing assignment.
+Each chunk - whatever its size - should have the same overall structure and should stand alone. 
+If a reader encounters it, they should be able to understand it in isolation from the other chunks. 
+No transitional statements or indexicals allowed!"<br>
+<input TYPE="radio" NAME="b" VALUE="1">Been there, done that.<br>
+<input TYPE="radio" NAME="b" VALUE="2">I might give this a shot as an in-class exercise.<br>
+<input TYPE="radio" NAME="b" VALUE="3">Um, I don't know about that.<br>
+<input TYPE="radio" NAME="b" VALUE="4">That's cheating!<br>
+<input TYPE="radio" NAME="b" VALUE="5">That's it! I am not reading any further!.<br><br>
+
+<strong>Style</strong></br>
+You explain "we are going to think of style information as metadata, a layer of information that 
+helps to describe how our message should look on the page, who its should address itself to, 
+and how these factors should influence the way audience members, overall, experience that message. 
+I want you to compose two distinct metadata layers for your message, encoding them in a 
+formalized way using Cascading Style Sheets, in order to customize your message for 
+two different audiences."<br>
+<input TYPE="radio" NAME="c" VALUE="1">Been there, done that.<br>
+<input TYPE="radio" NAME="c" VALUE="2">I might give this a shot as an in-class exercise.<br>
+<input TYPE="radio" NAME="c" VALUE="3">Um, I have no idea what you're talking about.<br>
+<input TYPE="radio" NAME="c" VALUE="4">That technobabble doesn't belong in my classroom!<br>
+<input TYPE="radio" NAME="c" VALUE="5">That's it! I am not reading any further!.<br><br>
+
+<strong>Memory</strong></br>
+You say "when you turn in your assignment, please make sure that I have read/write/execute access 
+to your public web directory so that I can access the change histories of your drafts."
+<br>
+<input TYPE="radio" NAME="d" VALUE="1">Been there, done that.<br>
+<input TYPE="radio" NAME="d" VALUE="2">I might give this a shot as an in-class exercise.<br>
+<input TYPE="radio" NAME="d" VALUE="3">Um, is this a portfolio we are talking about? 'cause I have some manilla folders on hand...<br>
+<input TYPE="radio" NAME="d" VALUE="4">I teach writing, not computer science!<br>
+<input TYPE="radio" NAME="d" VALUE="5">That's it! I am not reading any further!.<br><br>
+
+<strong>Delivery</strong></br>
+You implore: "No print please! I can't evaluate the transformations you've designed 
+if I only have static views on paper!"<br>
+<input TYPE="radio" NAME="e" VALUE="1">Been there, done that.<br>
+<input TYPE="radio" NAME="e" VALUE="2">I might give this a shot as an in-class exercise.<br>
+<input TYPE="radio" NAME="e" VALUE="3">Um, I think I might need to upgrade my browser.<br>
+<input TYPE="radio" NAME="e" VALUE="4">You mean I have to sit in front of a computer all day to grade these things?<br>
+<input TYPE="radio" NAME="e" VALUE="5">That's it! I am not reading any further!.<br><br>
+
+
+<input TYPE="button" VALUE="How Did I Do?" onClick=computeForm(this.form)><br><br>
+
+</form>
+</BODY>
+</HTML>
